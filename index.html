@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>Landing Page</title>
+    <style>
+     #animate {
+  width: 400px;
+  height: 60px;
+  position: absolute;
+  background-color:rgb(10, 0, 110);
+        }
+      body {
+        background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url('https://th.bing.com/th/id/R.d2123d63e0aaed5aecbaf362663d9b43?rik=ASENtdv6WNwFFQ&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2015%2f05%2fBlue-sea-landscape-wallpaper.jpg&ehk=z8NnEHVGskp18XSBCB5LEkl8oZMGn5JxTr2lBsP6MB4%3d&risl=&pid=ImgRaw&r=0');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .title {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 20px #000000;
+      }
+      #subtitle {
+        text-align: center;
+        font-size: 35px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+      }
+      #link {
+        text-align: center;
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px #000000;
+        
+      }
+      #popup {
+        text-align: lest;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 4px #000000;
+        
+      }
+      #nama {
+        text-align: center;
+        font-size: 15px;
+        color: rgb(67, 67, 176);
+        text-shadow: 2px 2px 4px #000000;
+        
+      }
+    </style>
+    <link href="https://th.bing.com/th/id/OIP.HNWSqWJVFRoe08me-jtUDgHaHg?pid=ImgDet&rs=1" rel="icon">
+  </head>
+  <body>
+    <div id ="animate"></div><br>
+    <a href = "https://rivaldoputra110802.github.io/cvAldo/" id="link"></a><br><br>
+    <p id = "popup">Silahkan masukkan nama Anda</p>
+    <p style=color:white>Nama :<input type=""text" id = "nama"></p>
+    <p><button onclick="myMove()">Klik untuk dapat kejutan.</button></p> 
+<a href = "https://rivaldoputra110802.github.io/cvAldo/" id="link"></a><br><br>
+<div id="subtitle"></div>
+
+
+<script>
+function myMove() {
+    var nama = document.getElementById("nama").value;
+  let id = null;
+  const elem = document.getElementById("animate");   
+  let pos1 = 0;
+  let pos2 = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos2 == 390) {
+      clearInterval(id);
+    } else {
+      pos2++; 
+
+      elem.style.top = pos1 + "px"; 
+      elem.style.left = pos2 + "px"; 
+    }
+  }
+  document.getElementById('link').innerHTML="Tekan Link untuk Menuju CV Aldo"
+  document.getElementById("subtitle").innerHTML="Halo, "+nama+" Selamat Datang ^_^"
+
+
+}
+</script>
+    <div class="container">
+      <div class="title">Landing Page CV ALdo</div>
+      
+    </div>
+
+  </body>
+  
+</html>
